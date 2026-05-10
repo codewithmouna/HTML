@@ -7,15 +7,218 @@
 </head>
 <body>
     <h1>Please Schedule Your Trip</h1>
-    <form>
-        <label for="userName">UserName : </label>
-        <input type="text" id="username" required>
-        <br>
-        <br>
-        <label for="password">Password : </label>
-        <input type="password" id="password" required>
-        <br><br>
-        <input type="submit">
-    </form>
+  <form>
+
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="+91 9876543210"><br><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="Male">
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="Female">
+      <label for="female">Female</label>
+
+      <input type="radio" id="other" name="gender" value="Other">
+      <label for="other">Other</label><br><br>
+
+      <label for="nationality">Nationality:</label><br>
+      <input type="text" id="nationality" name="nationality"><br><br>
+
+      <label for="passport">Passport Number:</label><br>
+      <input type="text" id="passport" name="passport"><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Address Details -->
+    <fieldset>
+      <legend>Address Details</legend>
+
+      <label for="address">Street Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="40"></textarea><br><br>
+
+      <label for="city">City:</label><br>
+      <input type="text" id="city" name="city"><br><br>
+
+      <label for="state">State:</label><br>
+      <input type="text" id="state" name="state"><br><br>
+
+      <label for="country">Country:</label><br>
+      <input type="text" id="country" name="country"><br><br>
+
+      <label for="zipcode">Zip Code:</label><br>
+      <input type="number" id="zipcode" name="zipcode"><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Booking Information -->
+    <fieldset>
+      <legend>Booking Information</legend>
+
+      <label for="checkin">Check-in Date:</label><br>
+      <input type="date" id="checkin" name="checkin" required><br><br>
+
+      <label for="checkout">Check-out Date:</label><br>
+      <input type="date" id="checkout" name="checkout" required><br><br>
+
+      <label for="guests">Number of Guests:</label><br>
+      <input type="number" id="guests" name="guests" min="1" max="20"><br><br>
+
+      <label for="rooms">Number of Rooms:</label><br>
+      <input type="number" id="rooms" name="rooms" min="1" max="10"><br><br>
+
+      <label for="roomtype">Room Type:</label><br>
+      <select id="roomtype" name="roomtype">
+        <option value="">--Select Room Type--</option>
+        <option value="standard">Standard Room</option>
+        <option value="deluxe">Deluxe Room</option>
+        <option value="suite">Luxury Suite</option>
+        <option value="villa">Beach Villa</option>
+      </select><br><br>
+
+      <label for="view">Preferred View:</label><br>
+      <select id="view" name="view">
+        <option value="">--Select View--</option>
+        <option value="sea">Sea View</option>
+        <option value="garden">Garden View</option>
+        <option value="pool">Pool View</option>
+      </select><br><br>
+
+      <label>Meal Plan:</label><br>
+      <input type="checkbox" id="breakfast" name="meal" value="Breakfast">
+      <label for="breakfast">Breakfast</label><br>
+
+      <input type="checkbox" id="lunch" name="meal" value="Lunch">
+      <label for="lunch">Lunch</label><br>
+
+      <input type="checkbox" id="dinner" name="meal" value="Dinner">
+      <label for="dinner">Dinner</label><br><br>
+
+      <label for="arrival">Arrival Time:</label><br>
+      <input type="time" id="arrival" name="arrival"><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Travel Details -->
+    <fieldset>
+      <legend>Travel Details</legend>
+
+      <label for="transport">Mode of Transport:</label><br>
+      <select id="transport" name="transport">
+        <option value="">--Select Transport--</option>
+        <option value="flight">Flight</option>
+        <option value="ship">Cruise Ship</option>
+        <option value="car">Car</option>
+        <option value="bus">Bus</option>
+      </select><br><br>
+
+      <label for="flightnumber">Flight / Vehicle Number:</label><br>
+      <input type="text" id="flightnumber" name="flightnumber"><br><br>
+
+      <label for="pickup">Airport Pickup Required?</label><br>
+      <input type="radio" id="pickupyes" name="pickup" value="Yes">
+      <label for="pickupyes">Yes</label>
+
+      <input type="radio" id="pickupno" name="pickup" value="No">
+      <label for="pickupno">No</label><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Payment Information -->
+    <fieldset>
+      <legend>Payment Information</legend>
+
+      <label for="cardname">Card Holder Name:</label><br>
+      <input type="text" id="cardname" name="cardname"><br><br>
+
+      <label for="cardnumber">Card Number:</label><br>
+      <input type="number" id="cardnumber" name="cardnumber"><br><br>
+
+      <label for="expiry">Expiry Date:</label><br>
+      <input type="month" id="expiry" name="expiry"><br><br>
+
+      <label for="cvv">CVV:</label><br>
+      <input type="password" id="cvv" name="cvv" maxlength="4"><br><br>
+
+      <label for="paymentmethod">Payment Method:</label><br>
+      <select id="paymentmethod" name="paymentmethod">
+        <option value="">--Select Payment Method--</option>
+        <option value="credit">Credit Card</option>
+        <option value="debit">Debit Card</option>
+        <option value="upi">UPI</option>
+        <option value="netbanking">Net Banking</option>
+      </select><br><br>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Additional Services -->
+    <fieldset>
+      <legend>Additional Services</legend>
+
+      <input type="checkbox" id="spa" name="services" value="Spa">
+      <label for="spa">Spa Service</label><br>
+
+      <input type="checkbox" id="watersports" name="services" value="Water Sports">
+      <label for="watersports">Water Sports</label><br>
+
+      <input type="checkbox" id="tourguide" name="services" value="Tour Guide">
+      <label for="tourguide">Tour Guide</label><br>
+
+      <input type="checkbox" id="bonfire" name="services" value="Beach Bonfire">
+      <label for="bonfire">Beach Bonfire</label><br><br>
+
+      <label for="requests">Special Requests:</label><br>
+      <textarea id="requests" name="requests" rows="5" cols="50" placeholder="Enter your special requests"></textarea>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Terms and Conditions -->
+    <fieldset>
+      <legend>Terms & Conditions</legend>
+
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">
+        I agree to the terms and conditions of Paradise Island Resort.
+      </label><br><br>
+
+      <input type="checkbox" id="newsletter" name="newsletter">
+      <label for="newsletter">
+        Subscribe to newsletter and offers.
+      </label>
+
+    </fieldset>
+
+    <br>
+
+    <!-- Buttons -->
+    <input type="submit" value="Book Now">
+    <input type="reset" value="Reset Form">
+
+  </form>
 </body>
 </html>
